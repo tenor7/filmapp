@@ -7,7 +7,7 @@ import com.example.filmapp.Presentation.Repository.Repository;
 
 public class AddFilmViewModel extends ViewModel {
 
-    public void AddParty(String name,
+    public void AddFilm(String name,
                          String genre,
                          String time,
                          String description){

@@ -1,7 +1,5 @@
 package com.example.filmapp.Domain.Model;
 
-import androidx.lifecycle.LiveData;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,22 +9,14 @@ public class Film {
     public String genre;
     public String time;
 
-    public List<Person> getPeopleList() {
-        return peopleList;
-    }
-
-    public void setPeopleList(List<Person> peopleList) {
-        this.peopleList = peopleList;
-    }
-
-    private List<Person> peopleList;
-
-    public Film() {}
-
-    public Film(String name, Person creator, String time) {
+    public Film(String name, String description, String genre, String time) {
         this.name = name;
+        this.description = description;
+        this.genre = genre;
         this.time = time;
-        this.peopleList = Arrays.asList(creator);
+    }
+
+    public Film() {
     }
 
     public String getName() {
@@ -53,20 +43,11 @@ public class Film {
         this.genre = genre;
     }
 
-
     public String getTime() {
         return time;
     }
 
     public void setTime(String time) {
         this.time = time;
-    }
-
-    public LiveData<List<Person>> getFilmList() {
-        return peopleList;
-    }
-
-    public void setFilmList(List<Person> filmList) {
-        this.peopleList = filmList;
     }
 }

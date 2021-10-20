@@ -5,7 +5,6 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import com.example.filmapp.Domain.Model.Film;
-import com.example.filmapp.Domain.Model.Person;
 import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
@@ -18,17 +17,4 @@ public class FilmDTO extends Film {
     @NotNull
     @ColumnInfo
     public int id;
-    @ColumnInfo
-    public String FilmList;
-
-
-    @Override
-    public List<Person> getFilmList() {
-        return new Gson().fromJson(this.FilmList, List.class);
-    }
-    @Override
-    public void setFilmList(List<Person> filmList) {
-        super.setFilmList(filmList);
-        this.FilmList = new Gson().toJson(filmList);
-    }
 }

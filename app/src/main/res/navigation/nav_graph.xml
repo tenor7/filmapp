@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/filmList"
-        android:name="filmapp.Presentation.View.FilmList"
+        android:name="com.example.filmapp.Presentation.View.FilmList"
         android:label="film_list_fragment"
         tools:layout="@layout/film_list_fragment" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/addFilm"
-        android:name="filmapp.Presentation.View.AddFilm"
+        android:name="com.example.filmapp.Presentation.View.AddFilm"
         android:label="add_film_fragment"
         tools:layout="@layout/add_film_fragment" />
 </navigation>

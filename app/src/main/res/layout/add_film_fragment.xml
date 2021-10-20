@@ -42,7 +42,7 @@
             android:id="@+id/film_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/normalMargin"
+            android:layout_marginBottom="@dimen/halfMargin"
             android:hint="Название фильма"
             android:paddingLeft="15dp"
             android:backgroundTint="@color/blue"

@@ -1,18 +1,16 @@
 package com.example.filmapp.Presentation.View;
 
-import androidx.lifecycle.ViewModelProvider;
-
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import com.example.filmapp.Presentation.ViewModel.AddFilmViewModel;
 import com.example.filmapp.databinding.AddFilmFragmentBinding;
@@ -41,7 +39,7 @@ public class AddFilm extends Fragment {
             @Override
             public void onClick(View v) {
                 if ((!mBinding.filmName.getText().toString().isEmpty())&&(!mBinding.filmGenre.getText().toString().isEmpty())&&(!mBinding.filmTime.getText().toString().isEmpty())&&(!mBinding.filmDescription.getText().toString().isEmpty())){
-                    mViewModel.AddParty(
+                    mViewModel.AddFilm(
                             mBinding.filmName.getText().toString(),
                             mBinding.filmGenre.getText().toString(),
                             mBinding.filmTime.getText().toString(),
@@ -61,7 +59,6 @@ public class AddFilm extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(AddFilmViewModel.class);
-        // TODO: Use the ViewModel
     }
 
     @Override
